@@ -1,0 +1,24 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class CodeChef {
+
+    public static void Toss(int n) {
+        Toss("", n);
+    }
+
+    private static void Toss(String str, int n) {
+        if (n == 0) {
+            System.out.println(str); 
+        } else {
+            Toss(str + "H", n - 1); 
+            Toss(str + "T", n - 1); 
+        }
+    }
+
+    public static void main(String[] args) {
+        int n = 3; 
+        Toss(n);
+    }
+}
